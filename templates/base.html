@@ -3,9 +3,7 @@
 <head>
     <title>{% if title %}{{ title|e }} - {% endif %}Gittip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ website.asset_url }}/reset.css" type="text/css">
     <link rel="stylesheet" href="{{ website.asset_version_url }}/gittip.css" type="text/css">
-    <link rel="stylesheet" href="{{ website.asset_url }}/chosen/chosen.css" type="text/css">
 
     {% block head %}{% endblock %}
 </head>
