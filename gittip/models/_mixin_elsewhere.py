@@ -85,7 +85,7 @@ class MixinElsewhere(object):
         """
         typecheck(size, int)
 
-        src = '/assets/%s/avatar-default.gif' % os.environ['__VERSION__']
+        src = None
 
         accounts = self.get_accounts_elsewhere()
 

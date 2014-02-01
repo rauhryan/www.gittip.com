@@ -51,7 +51,7 @@ title = "Please Confirm"
 {% block box %}
 <div class="on-confirm">
 
-    <div><img class="platform-icon" src="{{ account.get_platform_icon() }}"
+    <div><img class="platform-icon" src="{{ website.asset_url + account.get_platform_icon() }}"
     /> <span class="highlight">{{ username }}</span> is connected<br />to
     <b>{{ other.username }}</b> on Gittip.<br />Reconnect it?</div>
 
@@ -78,7 +78,7 @@ title = "Please Confirm"
 
                     {% for account in user_accounts %}
                         {% if account != None %}
-                            <img src="{{ account.get_platform_icon() }}" alt="{{ account.platform }}"
+                            <img src="{{ website.asset_url + account.get_platform_icon() }}" alt="{{ account.platform }}"
                                 class="platform-icon" />
                             {{ account.get_user_name() }}<br />
                         {% endif %}
@@ -103,7 +103,7 @@ title = "Please Confirm"
                     <br />
                     {% for other_account in other_accounts %}
                         {% if other_account != None %}
-                            <img src="{{ other_account.get_platform_icon() }}" alt="{{ other_account.platform }}"
+                            <img src="{{ website.asset_url + other_account.get_platform_icon() }}" alt="{{ other_account.platform }}"
                                 class="platform-icon" />
                             <span {% if other_account.platform == account.platform %}class="highlight"{% endif %}>
                                 {{ other_account.get_user_name() }}<br />
@@ -181,7 +181,7 @@ title = "Please Confirm"
                     {% for user_account in user_accounts %}
                         {% if user_account != None %}
                             <span class="account-elsewhere">
-                                <img src="{{ user_account.get_platform_icon() }}" alt="{{ user_account.platform }}"
+                                <img src="{{ website.asset_url + user_account.get_platform_icon() }}" alt="{{ user_account.platform }}"
                                     class="platform-icon" />
                                 {{ user_account.get_user_name() }}<br />
                             </span>
@@ -189,7 +189,7 @@ title = "Please Confirm"
                     {% endfor %}
 
                     <span class="account-elsewhere">
-                        <img src="{{ account.get_platform_icon() }}" alt="{{ account.platform }}"
+                        <img src="{{ website.asset_url + account.get_platform_icon() }}" alt="{{ account.platform }}"
                             class="platform-icon" />
                         <span class="highlight">
                             {{ account.get_user_name() }}<br />
@@ -228,7 +228,7 @@ title = "Please Confirm"
                     {% for other_account in other_accounts %}
                         {% if other_account != None and other_account.platform != account.platform %}
                             <span class="account-elsewhere">
-                                <img src="{{ other_account.get_platform_icon() }}" alt="{{ other_account.platform }}"
+                                <img src="{{ website.asset_url + other_account.get_platform_icon() }}" alt="{{ other_account.platform }}"
                                     class="platform-icon" />
                                 {{ other_account.get_user_name() }}<br />
                             </span>

@@ -18,9 +18,6 @@ class BountysourceAccount(AccountElsewhere):
     def get_user_name(self):
         return self.user_info['display_name']
 
-    def get_platform_icon(self):
-        return "/assets/icons/bountysource.12.png"
-
 
 def oauth_url(website, participant, redirect_url=None):
     """Return a URL to authenticate with Bountysource.

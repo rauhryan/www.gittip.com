@@ -234,3 +234,6 @@ class AccountElsewhere(object):
             = (%s, %s, %s) 
             WHERE platform=%s AND user_id=%s
         """, (access_token, refresh_token, expires, self.platform, self.user_id))
+
+    def get_platform_icon(self):
+        return "/icons/%s.16.png" % self.platform
